@@ -67,7 +67,7 @@ const Navigation = ({
         <ul>
           {
             menuList?.map((item) => (
-              <NavMenu key={item.href}>
+              <NavMenu key={item.href} active={item.href === pathname}>
                 <Link href={item.href}>{item.label}</Link>
               </NavMenu>
             ))
@@ -89,7 +89,7 @@ const Navigation = ({
               <ul>
               {
                   moreMenuList.map((item) => (
-                    <NavMenu key={item.href}>
+                    <NavMenu key={item.href} active={item.href === pathname}>
                       <Link href={item.href}>{item.label}</Link>
                     </NavMenu>
                   ))
